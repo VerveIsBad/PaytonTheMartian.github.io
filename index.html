@@ -15,8 +15,14 @@
     
     <main>
         <h1>Payton Coats</h1>
-        <p>Hello! I'm Payton, a 14 year old programmer.
-            <button id='about-me' onclick='toggleAboutMe()'>About Me</button>
+        <p>Hello! I'm Payton, a 14 year old programmer.</p>
+
+        <p>
+            <a class='anchor-btn' style='display: inline-block' onclick='toggleAboutMe()'>About Me</a>
+            <span style='display: inline-block'> - </span>
+            <a class='anchor-btn' href='./lab/' style='display: inline-block'>Lab</a>
+            <span style='display: inline-block'> - </span>
+            <a class='anchor-btn' style='display: inline-block' href='./showcase/'>Showcase</a>
         </p>
 
         <div id='about-me-text' style='display: none;'>
@@ -69,6 +75,12 @@
             <p>Well that was a lot of text, there is no TL;DR, maybe I'll make one some day. No idea.</p>
         </div>
     </main>
-    
+
+    <p id='secret-btn' style='color: rgb(20, 20, 30); cursor: pointer;'>.</p>
+
+    <script>
+        doLoadThings();
+    </script>
+
 </body>
 </html>

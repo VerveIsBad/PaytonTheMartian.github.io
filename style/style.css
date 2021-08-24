@@ -16,29 +16,26 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 80px;
 }
 
 main>h1 {
     flex: 1;
 }
 
-main>p {
-    flex: 1;
-}
-
-#about-me {
-    background-color: rgb(20, 100, 255);
-    border: none;
-    border-radius: 4px;
+main>h1>a {
+    color:rgb(235, 235, 225);
     cursor: pointer;
     transition: .2s;
-    width: 100px;
-    height: 25px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
-#about-me:hover {
-    background-color: rgb(20, 200, 100);
+main>h1>a:hover {
+    color: rgb(20, 100, 255);
+}
+
+main>p {
+    flex: 1;
 }
 
 #about-me-text {
@@ -46,5 +43,32 @@ main>p {
     border-radius: 20px;
     width: 90vw;
     padding: 4vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+.anchor-btn {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(20, 100, 255);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s;
+    width: 100px;
+    height: 1rem;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+.anchor-btn:hover {
+    background-color: rgb(20, 200, 100);
+}
+
+.showcase-btn {
+    width: 10vw;
+    height: 10vw;
+}
