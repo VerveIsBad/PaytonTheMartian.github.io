@@ -72,3 +72,46 @@ main>p {
     width: 10vw;
     height: 10vw;
 }
+
+.icon-anchor {
+    text-decoration: none;
+}
+
+.readme {
+    background-color: rgb(30, 30, 60);
+    width: 95vw;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+pre {
+    background-color: rgb(40, 40, 70);
+    font-family: monospace;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+code {
+    background-color: rgb(60, 60, 80);
+    font-family: monospace;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+pre>code {
+    background-color: rgb(40, 40, 70);
+}
+
+a {
+    color:rgb(50, 100, 225);
+    transition: .2s;
+}
+
+.nav-bar {
+    background-color: rgb(40, 40, 70);
+    text-align: center;
+    border-radius: 20px;
+    padding: 2vh 4vw 2vh 4vw;
+}

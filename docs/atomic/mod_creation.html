@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payton C / Atomic / Docs # Mod Creation</title>
+
+    <link rel='stylesheet' href='/style/style.css' />
+    <script src='/scripts/index.js'></script>
+
+</head>
+<body>
+    
+    <main>
+        <h1><a href='/'>Payton Coats</a> / <a href='/showcase/atomic.html'>Atomic</a> / <a href='./index.html'>Docs</a> # Mod Creation</h1>
+        <p>Documentation for mod creation with Atomic.</p>
+        
+        <div class='about-me-text'>
+            <div class='readme'>
+                <p>There are three required functions in each mod: <code>on_load(basemod)</code>, <code>post_load(basemod, mods)</code>, and <code>get_name()</code></p>
+                
+                <h2><code>on_load(basemod) -> None</code></h2>
+                <p>This function gets called when your mod is loaded, and because not all mods are yet loaded, you are only given the <code>basemod</code> is provided.</p>
+                
+                <h2><code>post_load(basemod, mods) -> None</code></h2>
+                <p>This function gets called after all mods have been loaded, so you can access other mods with the <code>mods</code> argument.</p>
+                
+                <h2><code>get_name() -> str</code></h2>
+                <p>This function is called any time something needs to get your mod's name. Whatever you return here is what the name of the mod is.</p>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>
