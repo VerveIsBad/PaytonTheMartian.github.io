@@ -1,0 +1,6 @@
+
+# Don't wanna post CA's Jarfiles without permissions!
+lab/experiments/chaos-awakens-website/downloads/versions/*.jar
+
+# MacOS things
+*.DS_Store

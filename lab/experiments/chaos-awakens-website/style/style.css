@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap);
+
+:root {
+	font-size: 16px;
+
+	--blue: #5bacdfff;
+	--dark-blue: #000f45ff;
+	--tan: #da9b71ff;
+	--brown: #592200ff;
+	--black: #04071bff;
+	--white: #fffff2ff;
+	--bittersweet-shimmer: #b95a54ff;
+}
+
+html, body {
+	background-color: var(--black);
+	color: var(--white);
+	font-family: 'Roboto Mono', monospace;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+main {
+	background-color: var(--black);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	overflow: none;
+	color: var(--white);
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+
+.links {
+	margin-top: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--blue);
+	transition: 0.2s;
+}
+
+a:hover {
+	color: var(--white);
+}
+
+p {
+	margin-bottom: 5px;
+	color: var(--white);
+}
+
+.flexed {
+	display: flex;
+}
+
+.flexed>a {
+	margin: 10px;
+}
+
+.hover-grow, .hover-grow-small {
+	transition: 0.2s;
+}
+
+.hover-grow:hover {
+	scale: 1.2;
+}
+
+.hover-grow-small:hover {
+	scale: 1.05;
+}
+
+.scaled {
+	scale: 1.1;
+}
+
+h1, h2, h3 {
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+/* Targets the title img, without me needing to make an ID / class, because I'm lazy like that. */
+img[src="/logo.png"] {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 965px;
+	max-height: 225px;
+}
+
+@media only screen and (max-width: 1000px) {
+	img[src="/logo.png"] {
+		max-width: calc(965px / 2);
+		max-height: calc(225px / 2);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	img[src="/logo.png"] {
+		max-width: calc(965px / 4);
+		max-height: calc(225px / 4);
+		margin-bottom: 20px;
+	}
+
+	main>p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
