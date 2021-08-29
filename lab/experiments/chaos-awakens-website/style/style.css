@@ -156,6 +156,10 @@ h1, h2, h3 {
 		max-width: calc(965px / 2);
 		max-height: calc(225px / 2);
 	}
+
+	.links-alt {
+		flex-direction: column;
+	}
 }
 
 @media only screen and (max-width: 600px) {
