@@ -39,16 +39,48 @@ main {
 
 .links {
 	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: end;
+	width: 100vw;
+}
+
+.links>a, .anchor-btn {
+	background-color: var(--blue);
+	padding: 10px;
+	border-radius: 20px;
+	transition: 0.2s;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.links>a:hover, .anchor-btn {
+	color: var(--black);
+	width: 200px;
+	box-shadow: var(--black) 0 0 5px 5px;
+}
+
+.links-alt>a {
+	color: var(--blue);
 }
 
 a {
 	text-decoration: none;
-	color: var(--blue);
+	color: var(--white);
 	transition: 0.2s;
 }
 
 a:hover {
-	color: var(--white);
+	color: var(--black);
+}
+
+a>img {
+	border-radius: 10px;
 }
 
 p {
@@ -76,32 +108,58 @@ p {
 	scale: 1.05;
 }
 
-.scaled {
-	scale: 1.1;
-}
-
 h1, h2, h3 {
 	margin-bottom: 2px;
 	margin-top: 2px;
 }
 
-/* Targets the title img, without me needing to make an ID / class, because I'm lazy like that. */
-img[src="/logo.png"] {
+.logo {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	max-width: 965px;
 	max-height: 225px;
+	width: 100%;
+	height: 100%;
+}
+
+.larger-rem {
+	font-size: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {
-	img[src="/logo.png"] {
+	.logo {
+		max-width: calc(965px / 2);
+		max-height: calc(225px / 2);
+	}
+
+	main>p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.links {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.links>a {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.links>a:hover {
+		color: var(--black);
+	}
+
+	.links>a>img {
 		max-width: calc(965px / 2);
 		max-height: calc(225px / 2);
 	}
 }
 
 @media only screen and (max-width: 600px) {
-	img[src="/logo.png"] {
+	.logo {
 		max-width: calc(965px / 4);
 		max-height: calc(225px / 4);
 		margin-bottom: 20px;
@@ -110,6 +168,11 @@ img[src="/logo.png"] {
 	main>p {
 		margin-left: 20px;
 		margin-right: 20px;
+	}
+
+	.links>a>img {
+		max-width: calc(965px / 4);
+		max-height: calc(225px / 4);
 	}
 }
 
