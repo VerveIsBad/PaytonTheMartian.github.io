@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payton C / Atomic</title>
-
-    <link rel='stylesheet' href='/style/style.css' />
-    <script src='/scripts/index.js'></script>
-    <script src="https://kit.fontawesome.com/1023b6f7e8.js" crossorigin="anonymous"></script>
-
-</head>
-<body>
-    
-    <main>
-        <h1><a href='/'>Payton Coats</a> / <a href='/showcase/index.html'>Showcase</a> / Atomic</h1>
-        <p>Atomic is a modding platform made in Python 3.</p>
+    <head>
         
-        <a class='icon-anchor' href='https://github.com/PaytonTheMartian/Atomic'><i class='fab fa-github'></i> Github</a>
-        <a class='icon-anchor' href='/docs/atomic/index.html'><i class='fas fa-book'></i> Documentation</a>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payton C / Atomic</title>
 
-        <div class='about-me-text'>
-            <div class='readme'>
-                <h1 id="atomic">Atomic</h1>
-                    <p>The Python modding platform.</p>
-                    <p>Atomic is a modding API for Python, made to be fast and simple.</p>
-                    
-                    <h2 id="installation">Installation</h2>
-                    <p>To include Atomic in your project, add the <code>atomic</code> folder to your project's root folder. Then copy the <code>mods/</code> folder as well.</p>
-                    <p>Next, add the following lines to your main file, or where your app/game gets initalized (Right before running the app/game):</p>
-<pre><code>from atomic import loader
-loader.load_mods([
-    'examplemod',
-    # other mods to load.
-])</code></pre>
-                    <p>Just like that, you've added Atomic.</p>
-                    <p>Atomic will need some setup a well, in <code>mods/basemod/</code>, make some files and functions that can be called from other locations in your app/game. This way modders can hook into the Base Mod and in turn, mod your app/game.</p>
-                    
-                    <h2 id="modding">Modding</h2>
-                    <p>The modding system of Atomic is intentionally small and simple.</p>
-                    <p>To make a mod, there are only a few steps.</p>
-                    <p>First, make a new folder in the <code>mods</code> folder. Make sure to use underscores rather than spaces. You can use <kbd>a-Z</kbd>, <kbd>0-9</kbd>, and <kbd>_</kbd>. Note that the folder&#39;s name cannot start with a number.</p>
-                    
-                    <p>Then, make a new <code>__init__.py</code> file inside your mod folder. This file gets executed when your mod is imported, so don&#39;t write much top-level code. Try to only use imports at the top-level.</p>
-                    
-                    <p>Inside this <code>__init__.py</code> file, make three new functions. <code>on_load(basemod)</code>, <code>post_load(basemod, mods)</code>, and <code>get_name()</code>.</p>
-                    
-                    <p><code>on_load(basemod)</code> is called when your mod is loaded, not all mods are loaded yet, so only basemod is provided in the args. This function has no return values.</p>
-                    <p><code>post_load(basemod, mods)</code> is called after all mods are loaded, so both basemod and all mods can be provided as arguments. This function also has no return values.</p>
-                    <p><code>get_name()</code> is called any time something needs to get the name of your mod. The return value of this function is the name of your mod.</p>
-                    
-                    <h2 id="projects-examples">Projects & Examples</h2>
-                    <p>If you make a project or an example using Atomic, let me know and I can put it here!</p>
-                    <p>Nothing is here yet!</p>
+        <link rel='stylesheet' href='/style/style.css' />
+        <script src='/scripts/index.js'></script>
+        <script src="https://kit.fontawesome.com/1023b6f7e8.js" crossorigin="anonymous"></script>
 
+    </head>
+
+    <body>
+        
+        <main>
+            <h1><a href='/'>Payton Coats</a> / <a href='/showcase/index.html'>Showcase</a> / Atomic</h1>
+            <p>Atomic is a modding platform made in Python 3.</p>
+            
+            <a class='icon-anchor' href='https://github.com/PaytonTheMartian/Atomic'><i class='fab fa-github'></i> Github</a>
+            <a class='icon-anchor' href='/docs/atomic/index.html'><i class='fas fa-book'></i> Documentation</a>
+
+            <div class='about-me-text'>
+                <div class='readme'>
+                    <h1 id="atomic">Atomic</h1>
+                        <p>The Python modding platform.</p>
+                        <p>Atomic is a modding API for Python, made to be fast and simple.</p>
+                        
+                        <h2 id="installation">Installation</h2>
+                        <p>To include Atomic in your project, add the <code>atomic</code> folder to your project's root folder. Then copy the <code>mods/</code> folder as well.</p>
+                        <p>Next, add the following lines to your main file, or where your app/game gets initalized (Right before running the app/game):</p>
+    <pre><code>from atomic import loader
+    loader.load_mods([
+        'examplemod',
+        # other mods to load.
+    ])</code></pre>   <!-- MAKE THIS AN IMAGE!!!!! Align it to the center. also add code examples an make them, "In context"-->
+                        <p>And just like that, you've added Atomic!</p>
+                        <p>Additionally, Atomic will need some setup a well, in <code>mods/basemod/</code>, make some files and functions that can be called from other locations in your app/game. 
+                            This way modders can hook into the Base Mod and in turn, mod your app/game.</p>
+                        
+                        <h2 id="modding">Modding</h2>
+                        <p>The modding system of Atomic is intentionally small and simple.</p>
+                        <p>To make a mod, there are only a few steps.</p>
+                        <p>First, make a new folder in the <code>mods</code> folder. Make sure to use underscores rather than spaces. You can use <kbd>a-Z</kbd>, <kbd>0-9</kbd>, and <kbd>_</kbd>. Note that the folder&#39;s name cannot start with a number.</p>
+                        
+                        <p>Then, make a new <code>__init__.py</code> file inside your mod folder. This file gets executed when your mod is imported, so don&#39;t write much top-level code. Try to only use imports at the top-level.</p>
+                        
+                        <p>Inside this <code>__init__.py</code> file, make three new functions: <code>on_load(basemod)</code>, <code>post_load(basemod, mods)</code>, and <code>get_name()</code>.</p>
+                        
+                        <p><code>on_load(basemod)</code> is called when your mod is loaded, not all mods are loaded yet, so only basemod is provided in the args. This function has no return values.</p>
+                        <p><code>post_load(basemod, mods)</code> is called after all mods are loaded, so both basemod and all mods can be provided as arguments. This function also has no return values.</p>
+                        <p><code>get_name()</code> is called any time something needs to get the name of your mod. The return value of this function is the name of your mod.</p>
+                        
+                        <h2 id="projects-examples">Projects & Examples</h2>
+                        <p>If you make a project or an example using Atomic, let me know and I can put it here!</p>
+                        <p align="center">-Nothing yet-</p>
+
+                </div>
             </div>
-        </div>
-    </main>
-    
-</body>
+        </main>
+        
+    </body>
 </html>
